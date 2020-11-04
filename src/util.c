@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-#include <lgn/util.h>
+#include <kit/util.h>
 
 void *memfill (void *destination,
                void *source,

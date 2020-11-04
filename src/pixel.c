@@ -1,6 +1,6 @@
 #include <stdint.h>
 
-#include <lgn/pixel.h>
+#include <kit/pixel.h>
 
 void pack_color (pixel_format_t format, void *destination, color_t color) {
 

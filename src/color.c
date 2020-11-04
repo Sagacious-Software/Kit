@@ -1,7 +1,7 @@
 #include <math.h>
 
-#include <lgn/color.h>
-#include <lgn/util.h>
+#include <kit/color.h>
+#include <kit/util.h>
 
 color_t make_color (color_type_t type) {
 

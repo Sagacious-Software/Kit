@@ -1,6 +1,6 @@
-# Light Gas and Nancy
+# Kit
 
-Negative Nancy's ANSI C utility library!
+ANSI C utility library!
 
 ## Build
 

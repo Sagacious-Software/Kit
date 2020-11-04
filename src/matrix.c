@@ -1,4 +1,4 @@
-#include <lgn/matrix.h>
+#include <kit/matrix.h>
 
 mat3_t make_mat3_with_vec3 (vec3_t x, vec3_t y, vec3_t z) {
 

@@ -1,7 +1,7 @@
 #include <math.h>
 
-#include <lgn/vector.h>
-#include <lgn/util.h>
+#include <kit/vector.h>
+#include <kit/util.h>
 
 vec2_t make_vec2 (double x, double y) {
 

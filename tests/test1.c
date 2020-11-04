@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-#include <lgn/util.h>
+#include <kit/util.h>
 
 int main (int argc, char **argv) {
 

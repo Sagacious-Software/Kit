@@ -1,4 +1,4 @@
-#include <lgn/image.h>
+#include <kit/image.h>
 
 image_t make_image (pixel_format_t format, buffer_t *buffer) {
 

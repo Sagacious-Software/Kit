@@ -1,8 +1,8 @@
 #include <stdlib.h>
 #include <stdint.h>
 
-#include <lgn/buffer.h>
-#include <lgn/util.h>
+#include <kit/buffer.h>
+#include <kit/util.h>
 
 buffer_t *create_buffer_with_data (vec2_t dimensions,
                                    size_t stride,
