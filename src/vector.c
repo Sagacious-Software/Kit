@@ -89,6 +89,11 @@ vec2_t unit_vec2 (vec2_t vector) {
     return divide_vec2_scalar (vector, length_vec2 (vector));
 }
 
+bool equals_vec2 (vec2_t a, vec2_t b) {
+
+    return a.x == b.x && a.y == b.y;
+}
+
 vec3_t make_vec3 (double x, double y, double z) {
 
     vec3_t vector;
@@ -183,4 +188,9 @@ double length_vec3 (vec3_t vector) {
 vec3_t unit_vec3 (vec3_t vector) {
 
     return divide_vec3_scalar (vector, length_vec3 (vector));
+}
+
+bool equals_vec3 (vec3_t a, vec3_t b) {
+
+    return a.x == b.x && a.y == b.y && a.z == b.z;
 }
