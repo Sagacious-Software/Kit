@@ -10,6 +10,20 @@ color_t make_color (color_type_t type) {
     return color;
 }
 
+color_t make_color_rgb (double red, double green, double blue) {
+
+    color_t color = make_color (COLOR_RGB);
+    color.colors.rgb = make_rgb_color (red, green, blue);
+    return color;
+}
+
+color_t make_color_hsv (double hue, double saturation, double value) {
+
+    color_t color = make_color (COLOR_HSV);
+    color.colors.hsv = make_hsv_color (hue, saturation, value);
+    return color;
+}
+
 rgb_color_t get_rgb_color (color_t color) {
 
     switch (color.type) {
@@ -32,6 +46,69 @@ hsv_color_t get_hsv_color (color_t color) {
         default:
             return color.colors.hsv;
     }
+}
+
+color_t add_color (color_t a, color_t b) {
+
+    color_t color = make_color (COLOR_RGB);
+    color.colors.rgb = add_rgb_color (get_rgb_color (a), get_rgb_color (b));
+    return color;
+}
+
+color_t subtract_color (color_t a, color_t b) {
+
+    color_t color = make_color (COLOR_RGB);
+    color.colors.rgb = subtract_rgb_color (get_rgb_color (a), get_rgb_color (b));
+    return color;
+}
+
+color_t multiply_color (color_t a, color_t b) {
+
+    color_t color = make_color (COLOR_RGB);
+    color.colors.rgb = multiply_rgb_color (get_rgb_color (a), get_rgb_color (b));
+    return color;
+}
+
+color_t divide_color (color_t a, color_t b) {
+
+    color_t color = make_color (COLOR_RGB);
+    color.colors.rgb = divide_rgb_color (get_rgb_color (a), get_rgb_color (b));
+    return color;
+}
+
+color_t add_color_scalar (color_t color, double scalar) {
+
+    color_t result = make_color (COLOR_RGB);
+    result.colors.rgb = add_rgb_color_scalar (get_rgb_color (color), scalar);
+    return result;
+}
+
+color_t subtract_color_scalar (color_t color, double scalar) {
+
+    color_t result = make_color (COLOR_RGB);
+    result.colors.rgb = subtract_rgb_color_scalar (get_rgb_color (color), scalar);
+    return result;
+}
+
+color_t multiply_color_scalar (color_t color, double scalar) {
+
+    color_t result = make_color (COLOR_RGB);
+    result.colors.rgb = multiply_rgb_color_scalar (get_rgb_color (color), scalar);
+    return result;
+}
+
+color_t divide_color_scalar (color_t color, double scalar) {
+
+    color_t result = make_color (COLOR_RGB);
+    result.colors.rgb = divide_rgb_color_scalar (get_rgb_color (color), scalar);
+    return result;
+}
+
+color_t exponentiate_color_scalar (color_t color, double scalar) {
+
+    color_t result = make_color (COLOR_RGB);
+    result.colors.rgb = exponentiate_rgb_color_scalar (get_rgb_color (color), scalar);
+    return result;
 }
 
 rgb_color_t make_rgb_color (double red, double green, double blue) {
