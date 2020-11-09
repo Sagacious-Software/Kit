@@ -18,4 +18,6 @@ region_t make_region_bounds (double left, double top, double right, double botto
 
 bool region_equals (region_t a, region_t b);
 
+vec2_t clip_vec2 (vec2_t vector, region_t region);
+
 #endif /* REGION_H */

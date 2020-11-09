@@ -38,6 +38,11 @@ double modulo (double n, double m) {
     return n;
 }
 
+double clip (double n, double min, double max) {
+
+    return MIN ( MAX ( n, min), max);
+}
+
 void vdie (const char *format, va_list arguments) {
 
     vfprintf (stderr, format, arguments);
