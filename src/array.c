@@ -23,8 +23,7 @@ void add_array (array_t *array, void *element) {
     if (array->n_elements == array->n_allocated) {
 
         array->n_allocated *= 2;
-        array->contents = reallocarray (array->contents,
-                                        array->n_allocated,
-                                        sizeof (void *));
+        array->contents = realloc (array->contents,
+                                   array->n_allocated * sizeof (void *));
     }
 }
