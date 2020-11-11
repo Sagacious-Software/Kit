@@ -18,6 +18,9 @@ region_t make_region_bounds (double left, double top, double right, double botto
 
 bool region_equals (region_t a, region_t b);
 
+/* TODO: rename to clamp */
 vec2_t clip_vec2 (vec2_t vector, region_t region);
+
+region_t intersect_region (region_t a, region_t b);
 
 #endif /* REGION_H */

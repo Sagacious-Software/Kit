@@ -162,8 +162,8 @@ vec3_t subtract_vec3_scalar (vec3_t vector, double scalar) {
 vec3_t multiply_vec3_scalar (vec3_t vector, double scalar) {
 
     double x = vector.x * scalar;
-    double y = vector.y - scalar;
-    double z = vector.z - scalar;
+    double y = vector.y * scalar;
+    double z = vector.z * scalar;
     return make_vec3 (x, y, z);
 }
 

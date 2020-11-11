@@ -22,9 +22,20 @@ bool region_equals (region_t a, region_t b) {
            equals_vec2 (a.dimensions, b.dimensions);
 }
 
+/* TODO: rename clamp */
 vec2_t clip_vec2 (vec2_t vector, region_t region) {
 
     return make_vec2 (clip (vector.x, region.offset.x, region.offset.x + region.dimensions.x),
                       clip (vector.y, region.offset.y, region.offset.y + region.dimensions.y));
 }
 
+region_t intersect_region (region_t a, region_t b)  {
+
+    /* TODO: make bounds representation and use that instead */
+    return make_region_bounds (MAX (a.offset.x, b.offset.x),
+                               MAX (a.offset.y, b.offset.y),
+                               MIN (a.offset.x + a.dimensions.x,
+                                    b.offset.x + b.dimensions.x),
+                               MIN (a.offset.y + a.dimensions.y,
+                                    b.offset.y + b.dimensions.y));
+}
