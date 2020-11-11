@@ -7,22 +7,22 @@
 typedef struct array_t {
 
     /* the array contents */
-    void **contents;
-
-    /* allocated number of elements */
-    size_t n_allocated;
+    void **elements;
 
     /* used number of elements */
     size_t n_elements;
 
+    /* allocated number of elements */
+    size_t n_allocated;
+
 } array_t;
 
-/* array constructor */
+/* initialize an array */
 /* NOTE: n_allocated must be > 0 */
-array_t *create_array (size_t n_allocated);
+array_t *initialize_array (array_t *array, size_t n_allocated);
 
-/* array destructor */
-void destroy_array (array_t *array);
+/* terminate an array */
+array_t *terminate_array (array_t *array);
 
 /* insert a pointer into the array */
 void add_array (array_t *array, void *element);
